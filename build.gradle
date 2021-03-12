@@ -67,3 +67,11 @@ task qa {
             ':libsignal-service:test',
             ':Signal-Android:assemblePlayProdDebug'
 }
+
+task qb {
+    group 'Verification'
+    description 'Quick build'
+    dependsOn ':Signal-Android:lintPlayProdRelease',
+            ':Signal-Android:assemblePlayProdRelease'
+}
+
